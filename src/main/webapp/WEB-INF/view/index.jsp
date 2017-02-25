@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<html>
+<html lang="en">
+
 <head>
   <title>MVC_HTML5_Angular</title>
-  <spring:url value="/resources/webjars/bootstrap/3.3.6/" var="bootstrappath">
-  <spring:url value="${bootstrappath}css/bootstrap.css" var="bootstrap"/>
-  <spring:url value="${bootstrappath}css/modern-business.css" var="startertemplate"/>
+  <spring:url value="/resources/webjars/bootstrap/3.3.6/" var="bootstrappath" />
+  <spring:url value="${bootstrappath}css/bootstrap.css" var="bootstrap" />
+  <spring:url value="/resources/css/modern-business.css" var="startertemplate" />
   <link href="${bootstrap}" rel="stylesheet" />
   <link href="${startertemplate}" rel="stylesheet" />
 </head>
+
 <body>
 
 <!-- Navigation -->
@@ -32,7 +32,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="about.html">About</a>
+          <a href="/about">About</a>
         </li>
         <li>
           <a href="services.html">Lessons</a>
@@ -281,7 +281,7 @@
 <script src="/resources/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="/resources/js/bootstrap.min.js"></script>
+<script src="${bootstrappath}js/bootstrap.min.js"></script>
 
 <!-- Script to Activate the Carousel -->
 <script>
@@ -290,8 +290,6 @@
   })
 </script>
 
-
-
-
 </body>
+
 </html>
